@@ -36,7 +36,18 @@ struct login: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }.padding(.top, 30)
-                
+                HStack {
+                    NavigationLink {
+                        NoPassword()
+                    } label: {
+                        Text("忘記密碼?")
+                            .font(.system(size: 10))
+                            .foregroundColor(.gray)
+                    }
+                        
+                    Text("點選此處ＸＸＸ")
+                        .font(.system(size: 10))
+                }
                 Spacer()
             }
             
