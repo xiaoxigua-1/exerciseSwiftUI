@@ -49,9 +49,20 @@ struct login: View {
                         .font(.system(size: 10))
                 }
                 Spacer()
+                HStack {
+                    NavigationLink {
+                        SingUpView()
+                    } label: {
+                        Text("註冊")
+                            .font(.system(size: 10))
+                    }
+                }
+                .padding(.bottom, 20)
             }
             
             .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("登入")
+            .navigationBarHidden(true)
         }
     }
 }

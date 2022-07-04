@@ -16,6 +16,7 @@
 		E61CBE3B286AA65600983C8A /* testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61CBE3A286AA65600983C8A /* testUITestsLaunchTests.swift */; };
 		E6656449287091170017E3E7 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6656448287091170017E3E7 /* login.swift */; };
 		E68EE4C42872FBEE0035CC84 /* NoPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EE4C32872FBEE0035CC84 /* NoPassword.swift */; };
+		E68EE4C6287310010035CC84 /* SingUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EE4C5287310010035CC84 /* SingUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		E61CBE3A286AA65600983C8A /* testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E6656448287091170017E3E7 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		E68EE4C32872FBEE0035CC84 /* NoPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoPassword.swift; sourceTree = "<group>"; };
+		E68EE4C5287310010035CC84 /* SingUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		E61CBE11286AA65300983C8A = {
 			isa = PBXGroup;
 			children = (
+				E68EE4C5287310010035CC84 /* SingUpView.swift */,
 				E61CBE1C286AA65300983C8A /* test */,
 				E61CBE2D286AA65600983C8A /* testTests */,
 				E61CBE37286AA65600983C8A /* testUITests */,
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E68EE4C6287310010035CC84 /* SingUpView.swift in Sources */,
 				E61CBE20286AA65300983C8A /* ContentView.swift in Sources */,
 				E6656449287091170017E3E7 /* login.swift in Sources */,
 				E61CBE1E286AA65300983C8A /* testApp.swift in Sources */,
