@@ -80,7 +80,6 @@
 		E61CBE11286AA65300983C8A = {
 			isa = PBXGroup;
 			children = (
-				E68EE4C5287310010035CC84 /* SingUpView.swift */,
 				E61CBE1C286AA65300983C8A /* test */,
 				E61CBE2D286AA65600983C8A /* testTests */,
 				E61CBE37286AA65600983C8A /* testUITests */,
@@ -101,6 +100,7 @@
 		E61CBE1C286AA65300983C8A /* test */ = {
 			isa = PBXGroup;
 			children = (
+				E68EE4C5287310010035CC84 /* SingUpView.swift */,
 				E61CBE1D286AA65300983C8A /* testApp.swift */,
 				E61CBE1F286AA65300983C8A /* ContentView.swift */,
 				E61CBE21286AA65600983C8A /* Assets.xcassets */,

@@ -17,6 +17,7 @@ struct login: View {
                     .frame(width: 100.0, height: 100.0)
                     .scaledToFill()
                     .clipShape(Circle())
+                    .padding(.top, 50)
                 Text("防疫ＸＸＸ\naaa")
                     .multilineTextAlignment(.center)
                 VStack {
