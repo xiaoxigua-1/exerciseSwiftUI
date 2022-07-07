@@ -29,7 +29,9 @@ struct login: View {
                     TextField("密碼", text: $text)
                 }.lineTextField()
                     .padding(.horizontal, 50)
-                Button(action: {}) {
+                NavigationLink{
+                    newView()
+                } label: {
                     Text("登入")
                         .padding(.horizontal, 50)
                         .padding(.vertical, 5)
