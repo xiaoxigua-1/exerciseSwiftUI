@@ -8,9 +8,20 @@
 import SwiftUI
 
 
+func text_padding(value: Double) -> Double {
+    let a = ((value - 30) / 15) * (UIScreen.main.bounds.width - 80) - 10
+    if a < 0 {
+        return 0
+    } else if a > UIScreen.main.bounds.width - 111 {
+        return (UIScreen.main.bounds.width - 111)
+    } else {
+        return  a
+    }
+}
+
 struct newView: View {
     @State var alter = false
-    @State var value: Double = 0
+    @State var value: Double = 1
     @State var date = Date()
     @State var time = Date()
     var body: some View {
@@ -25,8 +36,12 @@ struct newView: View {
                                 .bold()
                             Spacer()
                         }
-                        Text("\(Int(value)) 度")
-                        Slider(value: $value, in: 0...10)
+                        HStack {
+                            Text("\(Int(value)) 度")
+                                .padding(.leading, text_padding(value: value))
+                            Spacer()
+                        }
+                        Slider(value: $value, in: 30...45)
                         HStack {
                             Text("30.0")
                             Spacer()
@@ -49,8 +64,10 @@ struct newView: View {
     }
 }
 
+
 struct newView_Previews: PreviewProvider {
     static var previews: some View {
         newView()
+            .previewInterfaceOrientation(.portrait)
     }
 }
