@@ -25,40 +25,77 @@ struct newView: View {
     @State var date = Date()
     @State var time = Date()
     var body: some View {
-        VStack {
-            Button("Abc") {
+        ZStack {
+            Button("abc") {
                 alter = true
-            }.popover(isPresented: $alter) {
-                VStack{
+            }
+            if alter {
+                ZStack {
+                    Color.gray
+                    
+
                     VStack {
-                        HStack {
-                            Text("新增體溫紀錄")
-                                .bold()
-                            Spacer()
-                        }
-                        HStack {
-                            Text("\(Int(value)) 度")
-                                .padding(.leading, text_padding(value: value))
-                            Spacer()
-                        }
-                        Slider(value: $value, in: 30...45)
-                        HStack {
-                            Text("30.0")
-                            Spacer()
-                            Text("45.0")
-                        }
-                        HStack {
-                            Text("日期")
-                                .bold()
-                            Spacer()
-                        }
-                        DatePicker("", selection: $date, displayedComponents: .date)
-                            .labelsHidden()
-                            .clipped()
-                        DatePicker("", selection: $time, displayedComponents: .hourAndMinute)
-                            .datePickerStyle(.wheel)
-                    }.padding(.horizontal, 30)
-                }
+                        VStack {
+                            HStack {
+                                Text("新增體溫紀錄")
+                                    .bold()
+                                Spacer()
+                            }
+                            HStack {
+                                Text("\(Int(value)) 度")
+                                    .padding(.leading, text_padding(value: value))
+                                Spacer()
+                            }
+                            Slider(value: $value, in: 30...45)
+                            HStack {
+                                Text("30.0")
+                                Spacer()
+                                Text("45.0")
+                            }
+                            HStack {
+                                Text("日期")
+                                    .bold()
+                                Spacer()
+                            }
+                            DatePicker("", selection: $date, displayedComponents: .date)
+                                .labelsHidden()
+                                .clipped()
+                            DatePicker("", selection: $time, displayedComponents: .hourAndMinute)
+                                .datePickerStyle(.wheel)
+                            HStack {
+                                Button(action: {
+                                    alter = false
+                                }) {
+                                    Text("取消")
+                                        .padding()
+                                        .padding(.horizontal, 30)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 20)
+                                                .stroke(.gray, lineWidth: 2)
+                                        )
+                                }
+                                .foregroundColor(.gray)
+                                
+                                Button("確認") {
+                                    
+                                }
+                                .padding()
+                                .padding(.horizontal, 30)
+                                .background(.blue)
+                                .cornerRadius(15)
+                                .foregroundColor(.white)
+
+                            }
+                            .padding(.top, 10)
+                        }.padding(10)
+                    }
+                    .background(.white)
+                    .cornerRadius(20)
+                    .padding(.horizontal, 30)
+                    
+                        
+
+                }.edgesIgnoringSafeArea(.all)
             }
         }
     }
