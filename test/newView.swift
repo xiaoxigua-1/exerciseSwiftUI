@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import CoreData
+
 
 
 func text_padding(value: Double) -> Double {
@@ -25,6 +27,10 @@ struct newView: View {
     @State var date = Date()
     @State var time = Date()
     @State var search = ""
+    
+    @FetchRequest(entity: TestData.entity(),sortDescriptors: []) var data_list: FetchedResults<TestData>
+    @Environment(\.managedObjectContext) var context
+    
     var body: some View {
         ZStack {
             Color(.sRGB, red: 0.3, green: 0.3, blue: 0.5, opacity: 1).edgesIgnoringSafeArea(.all)
@@ -42,7 +48,9 @@ struct newView: View {
                 }
                     
                 List {
-                    
+                    ForEach(data_list) { data in
+                        Text("\(data.temperature)")
+                    }
                 }
                 
                 .frame(
@@ -112,8 +120,21 @@ struct newView: View {
                                 }
                                 .foregroundColor(.gray)
                                 
-                                Button("確認") {
+                                Button(action: {
+                                    let data = TestData(context: context)
+                                    data.temperature = Int32(self.value)
+                                    data.day = Date()
+                                    data.time = Date()
                                     
+                                    do {
+                                        try context.save()
+                                    } catch {
+                                        let error = error as NSError
+                                                    fatalError("An error occured: \(error)")
+                                    }
+                                    alter = false
+                                }) {
+                                    Text("確認")
                                 }
                                 .padding()
                                 .padding(.horizontal, 20)

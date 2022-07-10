@@ -18,6 +18,8 @@
 		E68EE4C42872FBEE0035CC84 /* NoPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EE4C32872FBEE0035CC84 /* NoPassword.swift */; };
 		E68EE4C6287310010035CC84 /* SingUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EE4C5287310010035CC84 /* SingUpView.swift */; };
 		E68EE4C828743EB40035CC84 /* newView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EE4C728743EB40035CC84 /* newView.swift */; };
+		E68EE506287A915E0035CC84 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E68EE504287A915E0035CC84 /* Model.xcdatamodeld */; };
+		E68EE508287A93E20035CC84 /* Persistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EE507287A93E20035CC84 /* Persistent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		E68EE4C32872FBEE0035CC84 /* NoPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoPassword.swift; sourceTree = "<group>"; };
 		E68EE4C5287310010035CC84 /* SingUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpView.swift; sourceTree = "<group>"; };
 		E68EE4C728743EB40035CC84 /* newView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newView.swift; sourceTree = "<group>"; };
+		E68EE505287A915E0035CC84 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		E68EE507287A93E20035CC84 /* Persistent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 		E61CBE1C286AA65300983C8A /* test */ = {
 			isa = PBXGroup;
 			children = (
+				E68EE504287A915E0035CC84 /* Model.xcdatamodeld */,
 				E68EE4C5287310010035CC84 /* SingUpView.swift */,
 				E61CBE1D286AA65300983C8A /* testApp.swift */,
 				E61CBE1F286AA65300983C8A /* ContentView.swift */,
@@ -110,6 +115,7 @@
 				E6656448287091170017E3E7 /* login.swift */,
 				E68EE4C32872FBEE0035CC84 /* NoPassword.swift */,
 				E68EE4C728743EB40035CC84 /* newView.swift */,
+				E68EE507287A93E20035CC84 /* Persistent.swift */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -272,6 +278,8 @@
 				E68EE4C6287310010035CC84 /* SingUpView.swift in Sources */,
 				E68EE4C828743EB40035CC84 /* newView.swift in Sources */,
 				E61CBE20286AA65300983C8A /* ContentView.swift in Sources */,
+				E68EE506287A915E0035CC84 /* Model.xcdatamodeld in Sources */,
+				E68EE508287A93E20035CC84 /* Persistent.swift in Sources */,
 				E6656449287091170017E3E7 /* login.swift in Sources */,
 				E61CBE1E286AA65300983C8A /* testApp.swift in Sources */,
 				E68EE4C42872FBEE0035CC84 /* NoPassword.swift in Sources */,
@@ -599,6 +607,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E68EE504287A915E0035CC84 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E68EE505287A915E0035CC84 /* Model.xcdatamodel */,
+			);
+			currentVersion = E68EE505287A915E0035CC84 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E61CBE12286AA65300983C8A /* Project object */;
 }
